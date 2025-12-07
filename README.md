@@ -14,7 +14,7 @@ To address this gap, we propose an RA for RL. By deconstructing and analyzing ei
   - `RA-to-framework mapping` - A view on RA by mapping each RA component to its realization status in RL systems.
 
 ## Color Semantics
-We use the following codes in `Final RA`.
+We use the following color codes in `Final RA`.
 - Green - Implemented as explicit component
 - Yellow - Implemented as implicit component
 - Red - Not implemented
