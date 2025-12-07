@@ -19,5 +19,5 @@ We use the following color codes in `Final RA`.
 - $\color{Yellow}{\textsf{Yellow}}$ - Implemented as implicit component
 - $\color{Red}{\textsf{Red}}$ - Not implemented
 - $\color{Grey}{\textsf{Grey}}$ - External dependency
-  
+
 `RA-to-framework mapping` includes all components marked in green and yellow, representing both explicitly and implicitly implemented components.
