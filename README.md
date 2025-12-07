@@ -11,6 +11,4 @@ To address this gap, we propose an RA for RL. By deconstructing and analyzing ei
   - `Axial coding` - Identifies components and their relationships. 
   - `Selective coding` - Refines component groups and builds reference architecture. 
   - `Final RA` - Finalized reference architecture
-    - Color semantics:
-      - 
   - `RA-to-framework mapping` - A view on RA by mapping each RA component to its realization status in RL systems.
