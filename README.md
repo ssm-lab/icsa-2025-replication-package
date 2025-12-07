@@ -7,4 +7,8 @@ The surge in reinforcement learning (RL) applications gave rise to diverse suppo
 To address this gap, we propose an RA for RL. By deconstructing and analyzing eighteen state-of-the-practice RL environments and frameworks, we identify recurring architectural components and their relationships, and codify them in an RA. To validate our RA and demonstrate its utility, we reconstruct characteristic RL patterns and some existing frameworks. Finally, we identify architectural trends, e.g., commonly used components, implementation strategies, and outline paths to improving RL frameworks. Our work aids RL framework developers in designing and implementing RL services, and helps users in integrating RL components into their applications.
 
 ## Contents
-- `/data` - Data extraction sheet of eighteen RL systems.
+- `/data/data.xlsx` - Data extraction sheet of eighteen RL systems.
+  - `Axial coding`
+  - `Selective coding`
+  - `Final RA`
+  - `RA-to-framework mapping`
