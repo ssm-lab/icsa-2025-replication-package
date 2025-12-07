@@ -16,6 +16,6 @@ To address this gap, we propose an RA for RL. By deconstructing and analyzing ei
 ## Color Semantics
 We use the following color codes in `Final RA`.
 - $\color{Green}{\textsf{Green}}$ - Implemented as explicit component
-- Yellow - Implemented as implicit component
-- Red - Not implemented
-- Grey - External dependency
+- $\color{Yellow}{\textsf{Yellow}}$ - Implemented as implicit component
+- $\color{Red}{\textsf{Red}}$ - Not implemented
+- $\color{Grey}{\textsf{Grey}}$ - External dependency
