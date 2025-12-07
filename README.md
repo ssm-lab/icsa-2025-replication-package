@@ -12,3 +12,10 @@ To address this gap, we propose an RA for RL. By deconstructing and analyzing ei
   - `Selective coding` - Refines component groups and builds reference architecture. 
   - `Final RA` - Finalized reference architecture.
   - `RA-to-framework mapping` - A view on RA by mapping each RA component to its realization status in RL systems.
+
+## Color Semantics
+We use the following codes in `Final RA`.
+- Green - Implemented as explicit component
+- Yellow - Implemented as implicit component
+- Red - Not implemented
+- Grey - External dependency
