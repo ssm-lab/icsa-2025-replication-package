@@ -9,20 +9,20 @@ To address this gap, we propose an RA for RL. By deconstructing and analyzing ei
 ## Sampled systems
 | Name | GitHub repository |
 |---|---|
-| Gymnasium |  |
-| PettingZoo | |
-| Unity ML-Agents | |
-| Isaac Gym | |
-| Isaac Lab | |
-| dm_control | |
-| DeepMind Lab | |
-| Arcade Learning Environment | |
-| Jumanji | |
-| Stable Baselines3 | |
-| RL Baselines3 Zoo | |
-| RLlib | |
-| Acme | |
-| MARLlib | |
+| Gymnasium | https://github.com/Farama-Foundation/Gymnasium |
+| PettingZoo | https://github.com/Farama-Foundation/PettingZoo |
+| Unity ML-Agents | https://github.com/Unity-Technologies/ml-agents |
+| Isaac Gym | https://github.com/isaac-sim/IsaacGymEnvs |
+| Isaac Lab | https://github.com/isaac-sim/IsaacLab |
+| dm_control | https://github.com/google-deepmind/dm_control |
+| DeepMind Lab | https://github.com/google-deepmind/lab |
+| Arcade Learning Environment | https://github.com/Farama-Foundation/Arcade-Learning-Environment |
+| Jumanji | https://github.com/instadeepai/jumanji |
+| Stable Baselines3 | https://github.com/DLR-RM/stable-baselines3 |
+| RL Baselines3 Zoo | https://github.com/DLR-RM/rl-baselines3-zoo |
+| RLlib | https://github.com/ray-project/ray/tree/master/rllib | 
+| Acme | https://github.com/google-deepmind/acme |
+| MARLlib | https://github.com/Replicable-MARL/MARLlib |
 | BenchMARL | |
 | Mava | |
 | Dopamine | |
