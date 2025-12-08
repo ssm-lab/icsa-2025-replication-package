@@ -13,11 +13,11 @@ To address this gap, we propose an RA for RL. By deconstructing and analyzing ei
   - `Final RA` - Finalized reference architecture.
   - `RA-to-framework mapping` - A view on RA by mapping each RA component to its realization status in RL systems.
 
-## Color Semantics
+## Color coding
 We use the following color codes in `Final RA`.
-- $\color{Green}{\textsf{Green}}$ - Implemented as explicit component
-- $\color{Yellow}{\textsf{Yellow}}$ - Implemented as implicit component
-- $\color{Red}{\textsf{Red}}$ - Not implemented
-- $\color{Grey}{\textsf{Grey}}$ - External dependency
+- $\color{Green}{\textsf{Green}}$ - Explicitly implemented component in the specific framework (i.e., standalone component) 
+- $\color{Yellow}{\textsf{Yellow}}$ - Explicitly implemented component in the specific framework (i.e., functionality is present but merged into another component)
+- $\color{Grey}{\textsf{Grey}}$ - Explicitly implemented component via an external third-party dependency
+- $\color{Red}{\textsf{Red}}$ - Component not implemented in the specific framework
 
 `RA-to-framework mapping` includes all components marked in green and yellow, representing both explicitly ($\color{Green}{\textsf{green}}$) and implicitly ($\color{Yellow}{\textsf{yellow}}$) implemented components.
