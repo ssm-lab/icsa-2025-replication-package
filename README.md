@@ -1,4 +1,4 @@
-# icsa-2025-replication-package
+# Replication package
 **For the article *A Reference Architecture of Reinforcement Learning Systems.***
 
 ---
