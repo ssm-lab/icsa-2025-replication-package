@@ -9,6 +9,24 @@ To address this gap, we propose an RA for RL. By deconstructing and analyzing ei
 ## Sampled systems
 | Name | GitHub repository |
 |---|---|
+| Gymnasium |  |
+| PettingZoo | |
+| Unity ML-Agents | |
+| Isaac Gym | |
+| Isaac Lab | |
+| dm_control | |
+| DeepMind Lab | |
+| Arcade Learning Environment | |
+| Jumanji | |
+| Stable Baselines3 | |
+| RL Baselines3 Zoo | |
+| RLlib | |
+| Acme | |
+| MARLlib | |
+| BenchMARL | |
+| Mava | |
+| Dopamine | |
+| Tianshou | |
 
 
 ## Contents
