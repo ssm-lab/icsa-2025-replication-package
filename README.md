@@ -1,4 +1,4 @@
-# Replication package
+# Data package
 **For the article *A Reference Architecture of Reinforcement Learning Systems.***
 
 ---
