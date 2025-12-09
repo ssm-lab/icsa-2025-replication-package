@@ -9,11 +9,11 @@ Our work aids RL framework developers in designing and implementing RL services,
 
 ## Contents
 - `/RA/reference_architecture.pdf` - The reference architecture (RA) of RL frameworks.
-- `/data/data.xlsx` - Data extraction sheet of eighteen RL systems.
+- `/data/data.xlsx` - Data extraction sheet of eighteen RL frameworks.
   - `Axial coding` - Identifies components and their relationships. 
   - `Selective coding` - Refines component groups and builds reference architecture. 
   - `Final RA` - Finalized reference architecture.
-  - `RA-to-framework mapping` - A view on RA by mapping each RA component to its realization status in RL systems.
+  - `RA-to-framework mapping` - A view on RA by mapping each RA component to its realization status in RL frameworks.
 
 ## Color coding
 We use the following color codes in `Final RA`.
