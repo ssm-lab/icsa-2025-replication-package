@@ -22,24 +22,24 @@ We use the following color codes in `Final RA`.
 
 `RA-to-framework mapping` includes all components marked in green and yellow, representing both explicitly ($\color{Green}{\textsf{green}}$) and implicitly ($\color{Yellow}{\textsf{yellow}}$) implemented components.
 
-## Sampled systems
-| Name | GitHub repository |
-|---|---|
-| Gymnasium | https://github.com/Farama-Foundation/Gymnasium |
-| PettingZoo | https://github.com/Farama-Foundation/PettingZoo |
-| Unity ML-Agents | https://github.com/Unity-Technologies/ml-agents |
-| Isaac Gym | https://github.com/isaac-sim/IsaacGymEnvs |
-| Isaac Lab | https://github.com/isaac-sim/IsaacLab |
-| dm_control | https://github.com/google-deepmind/dm_control |
-| DeepMind Lab | https://github.com/google-deepmind/lab |
-| Arcade Learning Environment | https://github.com/Farama-Foundation/Arcade-Learning-Environment |
-| Jumanji | https://github.com/instadeepai/jumanji |
-| Stable Baselines3 | https://github.com/DLR-RM/stable-baselines3 |
-| RL Baselines3 Zoo | https://github.com/DLR-RM/rl-baselines3-zoo |
-| RLlib | https://github.com/ray-project/ray/tree/master/rllib | 
-| Acme | https://github.com/google-deepmind/acme |
-| MARLlib | https://github.com/Replicable-MARL/MARLlib |
-| BenchMARL | https://github.com/facebookresearch/BenchMARL |
-| Mava | https://github.com/instadeepai/Mava |
-| Dopamine | https://github.com/google/dopamine |
-| Tianshou | https://github.com/thu-ml/tianshou |
+## Sampled frameworks
+| ID | Name | GitHub repository |
+|---|---|---|
+|F1| Gymnasium | https://github.com/Farama-Foundation/Gymnasium |
+|F2| PettingZoo | https://github.com/Farama-Foundation/PettingZoo |
+|F3| Unity ML-Agents | https://github.com/Unity-Technologies/ml-agents |
+|F4| Isaac Gym | https://github.com/isaac-sim/IsaacGymEnvs |
+|F5| Isaac Lab | https://github.com/isaac-sim/IsaacLab |
+|F6| dm_control | https://github.com/google-deepmind/dm_control |
+|F7| DeepMind Lab | https://github.com/google-deepmind/lab |
+|F8| Arcade Learning Environment | https://github.com/Farama-Foundation/Arcade-Learning-Environment |
+|F9| Jumanji | https://github.com/instadeepai/jumanji |
+|F10| Stable Baselines3 | https://github.com/DLR-RM/stable-baselines3 |
+|F11| RL Baselines3 Zoo | https://github.com/DLR-RM/rl-baselines3-zoo |
+|F12| RLlib | https://github.com/ray-project/ray/tree/master/rllib | 
+|F13| Acme | https://github.com/google-deepmind/acme |
+|F14| MARLlib | https://github.com/Replicable-MARL/MARLlib |
+|F15| BenchMARL | https://github.com/facebookresearch/BenchMARL |
+|F16| Mava | https://github.com/instadeepai/Mava |
+|F17| Dopamine | https://github.com/google/dopamine |
+|F18| Tianshou | https://github.com/thu-ml/tianshou |
