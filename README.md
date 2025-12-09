@@ -8,7 +8,7 @@ To address this gap, we propose an RA for RL frameworks. By deconstructing and a
 Our work aids RL framework developers in designing and implementing RL services, and helps users in integrating RL components into their applications.
 
 ## Contents
-- `/RA/reference architecture.pdf` - The reference architecture (RA) of RL frameworks.
+- `/RA/reference_architecture.pdf` - The reference architecture (RA) of RL frameworks.
 - `/data/data.xlsx` - Data extraction sheet of eighteen RL systems.
   - `Axial coding` - Identifies components and their relationships. 
   - `Selective coding` - Refines component groups and builds reference architecture. 
