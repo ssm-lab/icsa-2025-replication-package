@@ -18,7 +18,7 @@ Our work aids RL framework developers in designing and implementing RL services,
 ## Color coding
 We use the following color codes in `Final RA`.
 - $\color{Green}{\textsf{Green}}$ - Explicitly implemented component in the specific framework (i.e., standalone component) 
-- $\color{Yellow}{\textsf{Yellow}}$ - Explicitly implemented component in the specific framework (i.e., functionality is present but merged into another component)
+- $\color{Yellow}{\textsf{Yellow}}$ - Implicitly implemented component in the specific framework (i.e., functionality is present but merged into another component)
 - $\color{Grey}{\textsf{Grey}}$ - Explicitly implemented component via an external third-party dependency
 - $\color{Red}{\textsf{Red}}$ - Component not implemented in the specific framework
 
