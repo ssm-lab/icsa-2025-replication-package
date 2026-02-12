@@ -18,8 +18,8 @@ Our work aids RL framework developers in designing and implementing RL services,
     - `selective-coding` - Refines component groups and builds reference architecture.
     - `final-RA` - Finalized RA.
   - `03-final-RA.xlsx` - Includes finalized RA mapped to frameworks.
-    - `final-RA-to-framework-summary` - Mapping frameworks with implementation status (explicit, implicit, external, not implemented).
-    - `final-RA-to-framework-detail` - Mapping frameworks with detailed information, e.g., code snippet, explanation.
+    - `final-RA-to-framework-summary` - Mapping frameworks with implementation status.
+    - `final-RA-to-framework-detail` - Mapping frameworks with detailed information, e.g., link, code snippets, explanation.
 - `03-analysis` - Contains Python analysis scripts to obtain the results in the 04-results folder.
   - `table_generator.py` - Generates tables I-VI in the publication.
   - `statistics_generator.py` - Generates statistical calculations.
