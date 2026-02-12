@@ -20,10 +20,10 @@ Our work aids RL framework developers in designing and implementing RL services,
   - `03-final-RA.xlsx` - Includes finalized RA mapped to frameworks.
     - `final-RA-to-framework-summary` - Mapping frameworks with implementation status (explicit, implicit, external, not implemented).
     - `final-RA-to-framework-detail` - Mapping frameworks with detailed information, e.g., code snippet, explanation.
-- `03-analysis` - Contains Python analysis scripts to obtain the results in the 04-results folder
-  - `table_generator.py` - Generates tables I-VI in the publication
-  - `statistics_generator.py` - Generates statistics calculations
-- `04-results` - Contains the plots and statistics that are used in the publication
+- `03-analysis` - Contains Python analysis scripts to obtain the results in the 04-results folder.
+  - `table_generator.py` - Generates tables I-VI in the publication.
+  - `statistics_generator.py` - Generates statistical calculations.
+- `04-results` - Contains the plots and statistics that are used in the publication.
 
 ## Reproduction of analysis
 - Install the required Python packages by running `pip install -r ./03-analysis/requirements.txt` from the root folder.
