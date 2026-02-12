@@ -14,9 +14,9 @@ Our work aids RL framework developers in designing and implementing RL services,
 - `02-data` - Contains data used for GT and analysis.
   - `01-framework-metadata.xlsx` - Includes sampled framework metadata.
   - `02-gt-artifacts.xlsx` - Includes GT coding stages.
-    - `Axial coding` - Identifies components and their relationships. 
-    - `Selective coding` - Refines component groups and builds reference architecture.
-    - `Final RA` - Finalized RA.
+    - `axial-coding` - Identifies components and their relationships. 
+    - `selective-coding` - Refines component groups and builds reference architecture.
+    - `final-RA` - Finalized RA.
   - `03-final-RA.xlsx` - Includes finalized RA mapped to frameworks.
     - `final-RA-to-framework-summary` - RA mapped to frameworks with implementation status (explicit, implicit, external, not implemented).
     - `final-RA-to-framework-detail` - RA mapped to frameworks with detailed information, e.g., code snippet, explanation.
