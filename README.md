@@ -7,22 +7,30 @@ The surge in reinforcement learning (RL) applications gave rise to diverse suppo
 To address this gap, we propose an RA for RL frameworks. By deconstructing and analyzing eighteen state-of-the-practice RL frameworks, we identify recurring architectural components and their relationships, and codify them in an RA. To validate our RA and demonstrate its utility, we reconstruct characteristic RL patterns and existing frameworks. Finally, we identify architectural trends, e.g., commonly used components, implementation strategies, and outline paths to improving RL frameworks.
 Our work aids RL framework developers in designing and implementing RL services, and helps users in integrating RL components into their applications.
 
-## Contents
-- `/RA/reference_architecture.pdf` - The reference architecture (RA) of RL frameworks.
-- `/data/data.xlsx` - Data extraction sheet of eighteen RL frameworks.
-  - `Axial coding` - Identifies components and their relationships. 
-  - `Selective coding` - Refines component groups and builds reference architecture. 
-  - `Final RA` - Finalized reference architecture.
-  - `RA-to-framework mapping` - A view on RA by mapping each RA component to its realization status in RL frameworks.
+## Content description
+- `01-RA` - Contains the reference architecture (RA) of RL frameworks.
+  - `reference_architecture.pdf` - The pdf version of RA.
+  - `source` - Source files used to generate RA. 
+- `02-data` - Contains data used for GT and analysis.
+  - `01-framework-metadata.xlsx` - Includes sampled framework metadata.
+  - `02-gt-artifacts.xlsx` - Includes GT coding stages.
+    - `Axial coding` - Identifies components and their relationships. 
+    - `Selective coding` - Refines component groups and builds reference architecture.
+    - `Final RA` - Finalized RA.
+  - `03-final-RA.xlsx` - Includes finalized RA mapped to frameworks.
+    - `final-RA-to-framework-summary` - RA mapped to frameworks with implementation status (explicit, implicit, external, not implemented).
+    - `final-RA-to-framework-detail` - RA mapped to frameworks with detailed information, e.g., code snippet, explanation.
+- `03-analysis` - Contains Python analysis scripts to obtain the results in the 04-results folder
+  - `table_generator.py` - Generates tables I-VI in the publication
+  - `statistics_generator.py` - Generates statistics calculations
+- `04-results` - Contains the plots and statistics that are used in the publication
 
-## Color coding
-We use the following color codes in `Final RA`.
-- $\color{Green}{\textsf{Green}}$ - Explicitly implemented component in the specific framework (i.e., standalone component) 
-- $\color{Yellow}{\textsf{Yellow}}$ - Implicitly implemented component in the specific framework (i.e., functionality is present but merged into another component)
-- $\color{Grey}{\textsf{Grey}}$ - Explicitly implemented component via an external third-party dependency
-- $\color{Red}{\textsf{Red}}$ - Component not implemented in the specific framework
-
-`RA-to-framework mapping` includes all components marked in green and yellow, representing both explicitly ($\color{Green}{\textsf{green}}$) and implicitly ($\color{Yellow}{\textsf{yellow}}$) implemented components.
+## Reproduction of analysis
+- Install the required Python packages by running `pip install -r .\03-analysis\requirements.txt` from the root folder.
+- For the tables, run `python .\03-analysis\table_generator.py` from the root folder and follow the instructions. 
+Results will be generated into `04-results/tables` folders.
+- For statistics, run `python .\03-analysis\statistics_generator.py` from the root folder and follow the instructions. 
+Results  will be generated into `04-results/statistics` in a textual format.
 
 ## Sampled frameworks
 | ID | Name | GitHub repository |
