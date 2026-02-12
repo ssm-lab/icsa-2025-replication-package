@@ -10,6 +10,11 @@ SHEET = "final-RA-to-framework-summary"
 OUT_PATH = ROOT / "04-results" / "statistics" / "stats.txt"
 CODES = {"explicit", "implicit", "external", "not implemented"}
 
+# -------------------------
+# Constants
+# -------------------------
+ROW_DATA_START = 3
+
 
 def clean(x) -> str:
     if pd.isna(x):
@@ -24,7 +29,7 @@ def safe_div(a, b):
 
 def calculate_stats():
     df = pd.read_excel(XLSX_PATH, sheet_name=SHEET, header=None, engine="openpyxl")
-    data = df.iloc[2:, :].copy()
+    data = df.iloc[ROW_DATA_START:, :].copy()
     counts = {}
     for k in CODES:
         counts[k] = 0

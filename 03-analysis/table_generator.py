@@ -15,6 +15,13 @@ OUT_EXT = "pdf"
 KEEP_CODES = {"explicit", "implicit", "external"}
 
 # -------------------------
+# Constants
+# -------------------------
+ROW_FID = 1
+ROW_CITE = 2
+ROW_DATA_START = 3
+
+# -------------------------
 # Table configs
 # -------------------------
 TABLES = {
@@ -100,9 +107,9 @@ def fid_number(fid: str) -> int:
 
 def load_sheet():
     df = pd.read_excel(XLSX_PATH, sheet_name=SHEET, header=None, engine="openpyxl")
-    f_ids = [clean(x) for x in df.iloc[0, 2:].tolist()]
-    cite_keys = [clean(x) for x in df.iloc[1, 2:].tolist()]
-    data = df.iloc[2:, :].copy()
+    f_ids = [clean(x) for x in df.iloc[ROW_FID, 2:].tolist()]
+    cite_keys = [clean(x) for x in df.iloc[ROW_CITE, 2:].tolist()]
+    data = df.iloc[ROW_DATA_START:, :].copy()
     return data, f_ids, cite_keys
 
 
@@ -113,7 +120,7 @@ def collect_rows_for_group(data, f_ids, cite_keys, group_name: str):
         if clean(r[0]) != group_name:
             continue
         comp = clean(r[1])
-        if comp == "":
+        if comp == group_name:
             continue
 
         selected_fids = []
