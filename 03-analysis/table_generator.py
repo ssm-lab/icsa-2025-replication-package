@@ -17,7 +17,7 @@ KEEP_CODES = {"explicit", "implicit", "external"}
 # -------------------------
 # Constants
 # -------------------------
-ROW_FID = 1
+ROW_FID = 0
 ROW_CITE = 2
 ROW_DATA_START = 3
 
