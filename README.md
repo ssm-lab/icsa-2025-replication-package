@@ -26,10 +26,10 @@ Our work aids RL framework developers in designing and implementing RL services,
 - `04-results` - Contains the plots and statistics that are used in the publication
 
 ## Reproduction of analysis
-- Install the required Python packages by running `pip install -r .\03-analysis\requirements.txt` from the root folder.
-- For the tables, run `python .\03-analysis\table_generator.py` from the root folder and follow the instructions. 
+- Install the required Python packages by running `pip install -r ./03-analysis/requirements.txt` from the root folder.
+- For the tables, run `python ./03-analysis/table_generator.py` from the root folder and follow the instructions. 
 Results will be generated into `04-results/tables` folders.
-- For statistics, run `python .\03-analysis\statistics_generator.py` from the root folder and follow the instructions. 
+- For statistics, run `python ./03-analysis/statistics_generator.py` from the root folder and follow the instructions. 
 Results  will be generated into `04-results/statistics` in a textual format.
 
 ## Sampled frameworks
