@@ -23,7 +23,7 @@ To address this gap, we propose an RA of RL frameworks. Through a grounded theor
 - `03-analysis` - Contains Python analysis scripts to obtain the results in the 04-results folder.
   - `table_generator.py` - Generates tables I-VI in the publication.
   - `statistics_generator.py` - Generates statistical calculations.
-- `04-results` - Contains the plots and statistics that are used in the publication.
+- `04-results` - Contains the plots and statistics that are used in the publication. For details, see [`04-results/statistics/README.md`](04-results/statistics/README.md).
 
 ## Reproduction of analysis
 - Install the required Python packages by running `pip install -r ./03-analysis/requirements.txt` from the root folder.
