@@ -5,10 +5,10 @@ Report of component types in the analyzed frameworks.
 Reported values in `stats.txt`:
 - `Counts` - Number of occurrences of each category. (See [Categories](#Categories) below.)
 - `Percentages`
-  - `explicit v.s. total` - Proportion of all that are explicitly implemented.
-  - `explicit v.s. implemented` - Among implemented components, how many are explicit.
-  - `implicit v.s. implemented` - Among implemented components, how many are implicit.
-  - `external v.s. implemented` - Among implemented components, how many rely on external libraries.
+  - `explicit vs total` - The ratio of explicitly implemented components among all possible components (implemented or not implemented).
+  - `explicit vs implemented` - The ratio of explicitly implemented components among all implemented components.
+  - `implicit vs implemented` - The ratio of implicitly implemented components among all implemented components
+  - `external vs implemented` - The ratio of components implemented via external (third-party) libraries among all implemented components.
 
 These results are generated from `02-data/03-final-RA.xlsx` (sheet: `final-RA-to-framework-summary`)
 by using `03-analysis/statistics_generator.py` script.
