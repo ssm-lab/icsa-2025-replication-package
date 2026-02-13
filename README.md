@@ -9,6 +9,7 @@ To address this gap, we propose an RA for RL frameworks. Through a grounded theo
 ## Content description
 - `01-reference architecture` - Contains the reference architecture (RA) of RL frameworks.
   - `reference-architecture.pdf` - The pdf version of complete RA.
+  - `reference-architecture.png` - The png version of complete RA.
   - `reference-architecture-sources.vsd` - Visual Paradigm sources for the architectural figures in the article.
 - `02-data` - Contains data used for GT and analysis.
   - `01-framework-metadata.xlsx` - Includes sampled framework metadata.
