@@ -8,9 +8,9 @@ To address this gap, we propose an RA for RL frameworks. By deconstructing and a
 Our work aids RL framework developers in designing and implementing RL services, and helps users in integrating RL components into their applications.
 
 ## Content description
-- `01-RA` - Contains the reference architecture (RA) of RL frameworks.
-  - `reference_architecture.pdf` - The pdf version of RA.
-  - `source` - Source files used to generate RA. 
+- `01-reference architecture` - Contains the reference architecture (RA) of RL frameworks.
+  - `reference-architecture.pdf` - The pdf version of complete RA.
+  - `reference-architecture-sources.vsd` - Visual Paradigm sources for the architectural figures in the article.
 - `02-data` - Contains data used for GT and analysis.
   - `01-framework-metadata.xlsx` - Includes sampled framework metadata.
   - `02-gt-artifacts.xlsx` - Includes GT coding stages.
