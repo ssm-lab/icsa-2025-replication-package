@@ -1,11 +1,13 @@
 ## RA components tables
 
-These tables are generated from `02-data/03-final-RA.xlsx` (sheet: `final-RA-to-framework-summary`)
-by using `03-analysis/table_generator.py` script.
+RA components tables in the publication. Tables are in two formats, in the respective `latex/` and `pdf/` subfolders.
 
-- LaTeX version (`latex/`):
+- LaTeX format (`latex/`):
   - Tables for the paper, listing each component and the frameworks that implement it. 
   - The corresponding BibTeX entries are provided in `sources.bib`.
 
-- PDF version (`pdf/`):
+- PDF format (`pdf/`):
   - Visualization of the tables.
+
+These tables are generated from `02-data/03-final-RA.xlsx` (sheet: `final-RA-to-framework-summary`)
+by using `03-analysis/table_generator.py` script.
