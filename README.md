@@ -53,3 +53,6 @@ Results  will be generated into `04-results/statistics` in a textual format.
 |F16| Mava | https://github.com/instadeepai/Mava |
 |F17| Dopamine | https://github.com/google/dopamine |
 |F18| Tianshou | https://github.com/thu-ml/tianshou |
+
+## Final RA
+<img src="01-reference%20architecture/reference-architecture.png">
