@@ -16,6 +16,6 @@ by using `03-analysis/statistics_generator.py` script.
 #### Categories
 Each cell in the sheet `final-RA-to-framework-summary` that represents a mapping relation is classified into one of the following categories:
 - `explicit` - Explicitly implemented component in the specific framework (i.e., standalone component).
-- `implicit` - Implicitly implemented component in the specific framework (i.e., functionality is present but merged into another component).
+- `implicit` - Implicitly implemented component in the specific framework (e.g., functionality is present but merged into another component).
 - `external` - Implemented component via an external third-party dependency.
 - `not implemented` - Component not implemented in the specific framework.
