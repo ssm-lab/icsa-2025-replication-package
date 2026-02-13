@@ -5,9 +5,9 @@ by using `03-analysis/table_generator.py` script.
 
 ---
 
-- LaTeX (`latex/`):
+- LaTeX version (`latex/`):
   - Tables for the paper, listing each component and the frameworks that implement it. 
   - The corresponding BibTeX entries are provided in `sources.bib`.
 
-- PDF (`pdf/`):
+- PDF version (`pdf/`):
   - Visualization of the tables.
