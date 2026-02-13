@@ -12,9 +12,9 @@ Each cell in the sheet `final-RA-to-framework-summary` that represents a mapping
 
 
 Reported values in `stats.txt`:
-- Counts: number of occurrences of each category.
-- Percentages:
-  - explicit v.s. total: proportion of all that are explicitly implemented.
-  - explicit v.s. implemented: among implemented components, how many are explicit.
-  - implicit v.s. implemented: among implemented components, how many are implicit.
-  - external v.s. implemented: among implemented components, how many rely on external libraries.
+- `Counts`: number of occurrences of each category.
+- `Percentages`:
+  - `explicit v.s. total`: proportion of all that are explicitly implemented.
+  - `explicit v.s. implemented`: among implemented components, how many are explicit.
+  - `implicit v.s. implemented`: among implemented components, how many are implicit.
+  - `external v.s. implemented`: among implemented components, how many rely on external libraries.
