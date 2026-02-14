@@ -43,10 +43,10 @@ def calculate_stats():
     implemented = counts["explicit"] + counts["implicit"] + counts["external"]
 
     stats = {
-        "explicit v.s. total": safe_div(counts["explicit"], total),
-        "explicit v.s. implemented": safe_div(counts["explicit"], implemented),
-        "implicit v.s. implemented": safe_div(counts["implicit"], implemented),
-        "external v.s. implemented": safe_div(counts["external"], implemented),
+        "explicit vs total": safe_div(counts["explicit"], total),
+        "explicit vs implemented": safe_div(counts["explicit"], implemented),
+        "implicit vs implemented": safe_div(counts["implicit"], implemented),
+        "external vs implemented": safe_div(counts["external"], implemented),
     }
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)

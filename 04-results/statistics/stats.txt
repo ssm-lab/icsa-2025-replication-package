@@ -11,7 +11,7 @@ total                          | 414
 
 Percentages
 ----------------------------------------
-explicit v.s. total            | 23.43%
-explicit v.s. implemented      | 50.26%
-implicit v.s. implemented      | 27.46%
-external v.s. implemented      | 22.28%
+explicit vs total              | 23.43%
+explicit vs implemented        | 50.26%
+implicit vs implemented        | 27.46%
+external vs implemented        | 22.28%
