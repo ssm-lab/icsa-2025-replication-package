@@ -1,0 +1,31 @@
+==========================================================================
+Category: explicit
+==========================================================================
+  Component                                      Count   % of implemented
+  ------------------------------------------------------------------------
+  Benchmark Manager                                  1 / 1      100.0%
+  Environment                                        9 / 9      100.0%
+  Environment Core                                   9 / 9      100.0%
+  Recorder                                           9 / 11      81.8%
+  Agent                                              8 / 10      80.0%
+  Logger                                            14 / 18      77.8%
+  Checkpoint Manager                                 8 / 11      72.7%
+  Renderer                                           6 / 9       66.7%
+  Function Approximator                              6 / 10      60.0%
+  Buffer                                             6 / 10      60.0%
+  Simulator Adapter                                  3 / 8       37.5%
+  Reporter                                           4 / 12      33.3%
+  Lifecycle Manager                                  3 / 10      30.0%
+  Learner                                            3 / 10      30.0%
+  Configuration Manager                              2 / 7       28.6%
+  Environment Parameter Manager                      1 / 4       25.0%
+  Experiment Manager                                 2 / 10      20.0%
+  Multi-Agent Coordinator                            1 / 7       14.3%
+  Simulator                                          1 / 9       11.1%
+  Framework Orchestrator                             1 / 10      10.0%
+  Experiment Orchestrator                            0 / 1        0.0%
+  Hyperparameter Tuner                               0 / 3        0.0%
+  Distributed Execution Coordinator                  0 / 4        0.0%
+
+  Components exceeding 50%: 10 / 23
+  Proportion: 10/23 = 43.5%

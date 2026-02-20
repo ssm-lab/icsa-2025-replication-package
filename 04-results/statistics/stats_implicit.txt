@@ -1,0 +1,31 @@
+==========================================================================
+Category: implicit
+==========================================================================
+  Component                                      Count   % of implemented
+  ------------------------------------------------------------------------
+  Experiment Orchestrator                            1 / 1      100.0%
+  Multi-Agent Coordinator                            6 / 7       85.7%
+  Experiment Manager                                 8 / 10      80.0%
+  Framework Orchestrator                             8 / 10      80.0%
+  Environment Parameter Manager                      3 / 4       75.0%
+  Simulator Adapter                                  5 / 8       62.5%
+  Lifecycle Manager                                  5 / 10      50.0%
+  Learner                                            5 / 10      50.0%
+  Simulator                                          3 / 9       33.3%
+  Renderer                                           3 / 9       33.3%
+  Distributed Execution Coordinator                  1 / 4       25.0%
+  Function Approximator                              2 / 10      20.0%
+  Recorder                                           2 / 11      18.2%
+  Checkpoint Manager                                 1 / 11       9.1%
+  Hyperparameter Tuner                               0 / 3        0.0%
+  Benchmark Manager                                  0 / 1        0.0%
+  Configuration Manager                              0 / 7        0.0%
+  Agent                                              0 / 10       0.0%
+  Buffer                                             0 / 10       0.0%
+  Environment                                        0 / 9        0.0%
+  Environment Core                                   0 / 9        0.0%
+  Logger                                             0 / 18       0.0%
+  Reporter                                           0 / 12       0.0%
+
+  Components exceeding 50%: 6 / 23
+  Proportion: 6/23 = 26.1%

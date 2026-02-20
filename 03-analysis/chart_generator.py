@@ -8,10 +8,10 @@ import numpy as np
 # -------------------------
 # Paths
 # -------------------------
-ROOT       = Path(__file__).resolve().parent.parent
-XLSX_PATH  = ROOT / "02-data" / "03-final-RA.xlsx"
-SHEET      = "final-RA-to-framework-summary"
-OUT_DIR    = ROOT / "04-results" / "plots"
+ROOT = Path(__file__).resolve().parent.parent
+XLSX_PATH = ROOT / "02-data" / "03-final-RA.xlsx"
+SHEET = "final-RA-to-framework-summary"
+OUT_DIR = ROOT / "04-results" / "plots"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # -------------------------
@@ -20,8 +20,8 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 ROW_FID = 0
 ROW_CITE = 2
 ROW_DATA_START = 3
-CATEGORIES   = ["explicit", "implicit", "external"]
-COLORS       = {
+CATEGORIES = ["explicit", "implicit", "external"]
+COLORS = {
     "explicit": "#A8CD89",
     "implicit": "#F4E0AF",
     "external": "#F9C0AB",
