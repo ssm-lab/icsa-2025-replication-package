@@ -107,8 +107,8 @@ def plot_chart_horizontal(df):
     ax.set_xlim(0, df[CATEGORIES].sum(axis=1).max() + 1)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.set_title("Implementation Status of Components across Analyzed RL Frameworks",
-                 fontsize=11, fontweight="bold", pad=12)
+    # ax.set_title("Implementation Status of Components across Analyzed RL Frameworks",
+    #              fontsize=11, fontweight="bold", pad=12)
     _add_legend(ax)
     plt.tight_layout()
     return fig
@@ -124,8 +124,8 @@ def plot_chart_vertical(df):
     ax.set_ylim(0, df[CATEGORIES].sum(axis=1).max() + 1)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
-    ax.set_title("Implementation Status of Components across Analyzed RL Frameworks",
-                 fontsize=11, fontweight="bold", pad=12)
+    # ax.set_title("Implementation Status of Components across Analyzed RL Frameworks",
+    #              fontsize=11, fontweight="bold", pad=12)
     _add_legend(ax)
     plt.tight_layout()
     return fig
