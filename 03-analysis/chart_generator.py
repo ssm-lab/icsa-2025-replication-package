@@ -37,6 +37,15 @@ def clean(x) -> str:
         return ""
     return str(x).strip()
 
+def sort_data(df):
+    df["total"] = df[CATEGORIES].sum(axis=1)
+    df = df.sort_values(
+        by=["total", "explicit", "implicit", "external"],
+        ascending=False
+    )
+    df = df.drop(columns="total")
+    return df
+
 def load_data():
     df = pd.read_excel(XLSX_PATH, sheet_name=SHEET, header=None, engine="openpyxl")
     data = df.iloc[ROW_DATA_START:, :].copy().reset_index(drop=True)
@@ -55,7 +64,8 @@ def load_data():
         counts["component"] = name
         records.append(counts)
     result_df = pd.DataFrame(records).set_index("component")
-    # total = result_df[CATEGORIES].sum(axis=1) # total for calculating the percentage if needed
+    result_df = sort_data(result_df)
+    # print(result_df.head(10))
     return result_df
 
 
@@ -69,11 +79,11 @@ def _build_stacked_bars(ax, df, orientation="horizontal"):
         if orientation == "horizontal":
             bars = ax.barh(pos, values, left=offset,
                            color=COLORS[cat], label=LABELS[cat],
-                           edgecolor="white", linewidth=0.5, height=0.65)
+                           edgecolor="white", linewidth=0.5, height=0.5)
         else:
             bars = ax.bar(pos, values, bottom=offset,
                           color=COLORS[cat], label=LABELS[cat],
-                          edgecolor="white", linewidth=0.5, width=0.65)
+                          edgecolor="white", linewidth=0.5, width=0.5)
 
         for bar, val, o in zip(bars, values, offset):
             if val > 0:
@@ -86,18 +96,28 @@ def _build_stacked_bars(ax, df, orientation="horizontal"):
                         fontsize=7.5, color="black", fontweight="bold")
         offset += values
 
+    for i, total in enumerate(offset):
+        if orientation == "horizontal":
+            ax.text(total + 0.1, i, str(int(total)),
+                    ha="left", va="center",
+                    fontsize=7.5, color="black", fontweight="bold")
+        else:
+            ax.text(i, total + 0.1, str(int(total)),
+                    ha="center", va="bottom",
+                    fontsize=7.5, color="black", fontweight="bold")
+
 
 def _add_legend(ax):
     legend_patches = [
         mpatches.Patch(color=COLORS[cat], label=LABELS[cat])
-        for cat in CATEGORIES
+        for cat in reversed(CATEGORIES)
     ]
     ax.legend(handles=legend_patches, fontsize=9,
               framealpha=0.9, edgecolor="lightgrey")
 
 
 def plot_chart_horizontal(df):
-    fig, ax = plt.subplots(figsize=(11, max(6, len(df) * 0.45 + 2)))
+    fig, ax = plt.subplots(figsize=(11, max(4, len(df) * 0.3 + 1)))
     _build_stacked_bars(ax, df, orientation="horizontal")
     ax.set_yticks(np.arange(len(df)))
     ax.set_yticklabels(df.index, fontsize=9)
@@ -115,13 +135,16 @@ def plot_chart_horizontal(df):
 
 
 def plot_chart_vertical(df):
-    fig, ax = plt.subplots(figsize=(max(10, len(df) * 0.55 + 2), 7))
+    fig, ax = plt.subplots(figsize=(max(8, len(df) * 0.3 + 1), 5))
     _build_stacked_bars(ax, df, orientation="vertical")
     ax.set_xticks(np.arange(len(df)))
-    ax.set_xticklabels(df.index, fontsize=8, rotation=45, ha="right")
-    ax.set_ylabel("Number of Frameworks", fontsize=10)
-    ax.yaxis.set_major_locator(matplotlib.ticker.MaxNLocator(integer=True))
-    ax.set_ylim(0, df[CATEGORIES].sum(axis=1).max() + 1)
+    ax.set_xticklabels(df.index, fontsize=7, rotation=45, ha="right")
+    # ax.set_ylabel("Number of Frameworks", fontsize=10)
+    # ax.yaxis.set_major_locator(matplotlib.ticker.MaxNLocator(integer=True))
+    # ax.set_ylim(0, df[CATEGORIES].sum(axis=1).max() + 1)
+    ax.set_xlim(-0.5, len(df) - 0.5)
+    ax.yaxis.set_visible(False)
+    ax.spines["left"].set_visible(False)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     # ax.set_title("Implementation Status of Components across Analyzed RL Frameworks",
