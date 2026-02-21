@@ -27,5 +27,5 @@ Category: implicit
   Logger                                             0 / 18       0.0%
   Reporter                                           0 / 12       0.0%
 
-  Components exceeding 50%: 6 / 23
-  Proportion: 6/23 = 26.1%
+  Components exceeding 50%: 8 / 23
+  Proportion: 8/23 = 34.8%

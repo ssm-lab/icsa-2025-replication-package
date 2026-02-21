@@ -127,7 +127,7 @@ def stats_category_report(df, category, threshold=0.5):
 
     exceeded = 0
     for comp, count, implemented, pct, group in rows:
-        if pct > threshold * 100:
+        if pct >= threshold * 100:
             exceeded += 1
         lines.append(
             f"  {comp:45} {count:>6} / {int(implemented):<5}  {pct:5.1f}%"
