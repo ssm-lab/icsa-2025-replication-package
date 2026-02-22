@@ -1,0 +1,26 @@
+component,framework_external,framework_implicit,framework_explicit,environment_explicit,environment_implicit,environment_external
+Experiment Orchestrator,0,1,0,0,0,0
+Experiment Manager,0,8,2,0,0,0
+Hyperparameter Tuner,3,0,0,0,0,0
+Benchmark Manager,0,0,1,0,0,0
+Framework Orchestrator,1,8,1,0,0,0
+Lifecycle Manager,2,5,3,0,0,0
+Configuration Manager,4,0,2,0,0,1
+Multi-Agent Coordinator,0,4,1,0,2,0
+Distributed Execution Coordinator,3,1,0,0,0,0
+Agent,2,0,8,0,0,0
+Function Approximator,2,2,6,0,0,0
+Buffer,4,0,6,0,0,0
+Learner,2,5,3,0,0,0
+Environment,0,0,1,8,0,0
+Environment Core,0,0,1,8,0,0
+Simulator,0,0,1,0,3,5
+Simulator Adapter,0,0,1,2,5,0
+Data Persistence,1,0,9,0,4,0
+Checkpoint Manager,2,0,8,0,1,0
+Environment Parameter Manager,0,0,1,0,3,0
+Monitoring & Visualization,1,0,9,7,1,0
+Renderer,0,1,0,6,2,0
+Recorder,0,1,4,4,1,1
+Logger,4,0,6,7,0,1
+Reporter,7,0,2,2,0,1
