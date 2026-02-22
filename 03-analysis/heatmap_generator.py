@@ -196,7 +196,7 @@ def build_heatmap_df(keep_components,manual_order=None):
 
 def plot_heatmap(df):
     df = df.rename(index=COMPONENT_RENAME)
-    fig, ax = plt.subplots(figsize=(7, 8))
+    fig, ax = plt.subplots(figsize=(7, 7))
 
     sns.heatmap(df, ax=ax, fmt="d", cmap="Blues", cbar=False, vmin=0)
     for r in range(df.shape[0]):
