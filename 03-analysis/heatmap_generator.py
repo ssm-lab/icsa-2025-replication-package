@@ -73,12 +73,75 @@ COMPONENT_RENAME = {
     "Reporter": "Reporter",
 }
 
+KEEP_COMPONENTS = {
+    "Experiment Orchestrator",
+    "Experiment Manager",
+    "Hyperparameter Tuner",
+    "Benchmark Manager",
+    "Framework Orchestrator",
+    "Lifecycle Manager",
+    "Configuration Manager",
+    "Multi-Agent Coordinator",
+    "Distributed Execution Coordinator",
+    "Agent",
+    "Function Approximator",
+    "Buffer",
+    "Learner",
+    "Environment",
+    "Environment Core",
+    "Simulator",
+    "Simulator Adapter",
+}
+
+KEEP_COMPONENTS_UTILITIES = {
+    "Data Persistence",
+    "Checkpoint Manager",
+    "Environment Parameter Manager",
+    "Monitoring & Visualization",
+    "Renderer",
+    "Recorder",
+    "Logger",
+    "Reporter",
+}
+
+MANUAL_ORDER = [
+    "Agent",
+    "Buffer",
+    "Function Approximator",
+    "Learner",
+    "Framework Orchestrator",
+    "Experiment Manager",
+    "Lifecycle Manager",
+    "Multi-Agent Coordinator",
+    "Configuration Manager",
+    "Distributed Execution Coordinator",
+    "Hyperparameter Tuner",
+    "Experiment Orchestrator",
+    "Benchmark Manager",
+    "Simulator Adapter",
+    "Simulator",
+    "Environment",
+    "Environment Core",
+]
+
+MANUAL_ORDER_UTILITIES = [
+    "Environment Parameter Manager",
+    "Checkpoint Manager",
+    "Data Persistence",
+    "Monitoring & Visualization",
+    "Logger",
+    "Recorder",
+    "Renderer",
+    "Reporter",
+]
+
+
 def clean(x) -> str:
     if pd.isna(x):
         return ""
     return str(x).strip()
 
-def build_heatmap_df():
+def build_heatmap_df(keep_components,manual_order=None):
     df_raw = pd.read_excel(XLSX_PATH, sheet_name=SHEET, header=None, engine="openpyxl")
 
     names = {}
@@ -115,33 +178,45 @@ def build_heatmap_df():
 
         records.append({
             "component":    name,
+            "framework_implicit": framework_counts["implicit"],
             "framework_external":  framework_counts["external"],
-            "framework_implicit":  framework_counts["implicit"],
             "framework_explicit":  framework_counts["explicit"],
-            "environment_explicit": environment_counts["explicit"],
             "environment_implicit": environment_counts["implicit"],
             "environment_external": environment_counts["external"],
+            "environment_explicit": environment_counts["explicit"],
         })
 
-    return pd.DataFrame(records).set_index("component")
+    df = pd.DataFrame(records).set_index("component")
+    df = df[df.index.isin(keep_components)]
+
+    if manual_order is not None:
+        df = df.reindex([c for c in manual_order if c in df.index])
+    return df
 
 
 def plot_heatmap(df):
     df = df.rename(index=COMPONENT_RENAME)
     fig, ax = plt.subplots(figsize=(7, 8))
 
-    sns.heatmap(df, ax=ax, annot=True, fmt="d", cmap=sns.cubehelix_palette(as_cmap=True))
+    sns.heatmap(df, ax=ax, fmt="d", cmap="Blues", cbar=False, vmin=0)
+    for r in range(df.shape[0]):
+        for c in range(df.shape[1]):
+            val = int(df.iloc[r, c])
+            if val != 0:
+                color = "white" if val >= 5 else "black"
+                ax.text(c + 0.5, r + 0.5, str(val),
+                        ha="center", va="center", fontsize=11, color=color)
 
     ax.axvline(x=3, color="white", linewidth=2.5)
     ax.set_xticklabels(
-        ["External", "Implicit", "Explicit", "Explicit", "Implicit", "External"],
+        ["Implicit", "External", "Explicit", "Implicit", "External", "Explicit"],
         rotation=0, fontsize=11
     )
-    ax.text(0.25, 1.01, "Frameworks", ha="center", va="bottom",
+    ax.text(0.25, 1.01, "Labeled as Framework", ha="center", va="bottom",
             fontsize=11, fontweight="bold", transform=ax.transAxes)
-    ax.text(0.75, 1.01, "Environments", ha="center", va="bottom",
+    ax.text(0.75, 1.01, "Labeled as Environment", ha="center", va="bottom",
             fontsize=11, fontweight="bold", transform=ax.transAxes)
-    ax.set_yticklabels(ax.get_yticklabels(), rotation=0, fontsize=10.5)
+    ax.set_yticklabels(ax.get_yticklabels(), rotation=0, fontsize=11)
     ax.set_ylabel("")
 
     plt.tight_layout()
@@ -150,17 +225,28 @@ def plot_heatmap(df):
 
 def main():
     print("Building heatmap data…")
-    df = build_heatmap_df()
+    df_core = build_heatmap_df(KEEP_COMPONENTS, MANUAL_ORDER)
     csv_path = OUT_DIR / "statistics" / "heatmap_data.csv"
-    df.to_csv(csv_path)
+    df_core.to_csv(csv_path)
     print(f"\nSaved CSV to {csv_path}")
     print("Plotting heatmap…")
-    fig = plot_heatmap(df)
+    fig = plot_heatmap(df_core)
     fig.savefig(OUT_DIR / "plots" / "heatmap.png", dpi=250, bbox_inches="tight")
     fig.savefig(OUT_DIR / "plots" / "heatmap.pdf", bbox_inches="tight")
     plt.close(fig)
     print("Saved heatmap.")
-    return df
+
+    print("Building heatmap data for utilities…")
+    df_util = build_heatmap_df(KEEP_COMPONENTS_UTILITIES, MANUAL_ORDER_UTILITIES)
+    csv_path_util = OUT_DIR / "statistics" / "heatmap_data_util.csv"
+    df_util.to_csv(csv_path_util)
+    print(f"\nSaved CSV to {csv_path}")
+    print("Plotting heatmap for utilities…")
+    fig = plot_heatmap(df_util)
+    fig.savefig(OUT_DIR / "plots" / "heatmap_util.png", dpi=250, bbox_inches="tight")
+    fig.savefig(OUT_DIR / "plots" / "heatmap_util.pdf", bbox_inches="tight")
+    plt.close(fig)
+    print("Saved heatmap.")
 
 
 if __name__ == "__main__":

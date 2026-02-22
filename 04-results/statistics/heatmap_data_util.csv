@@ -1,0 +1,9 @@
+component,framework_implicit,framework_external,framework_explicit,environment_implicit,environment_external,environment_explicit
+Environment Parameter Manager,0,0,1,3,0,0
+Checkpoint Manager,0,2,8,1,0,0
+Data Persistence,0,1,9,4,0,0
+Monitoring & Visualization,0,1,9,1,0,7
+Logger,0,4,6,0,1,7
+Recorder,1,0,4,1,1,4
+Renderer,1,0,0,2,0,6
+Reporter,0,7,2,0,1,2
