@@ -105,38 +105,38 @@ def calculate_stats():
     print("Saved:", OUT_PATH)
 
 
-def stats_category_report(df, category, threshold=0.5):
-    n_total = len(df)
-    lines   = [
-        "=" * 74,
-        f"Category: {category}",
-        "=" * 74,
-        f"  {'Component':45} {'Count':>6} {'% of implemented':>18}",
-        "  " + "-" * 72,
-    ]
-    rows = []
-    for comp, row in df.iterrows():
-        implemented = row["explicit"] + row["implicit"] + row["external"]
-        if implemented > 0:
-            pct = safe_pct(row[category], implemented)
-        else:
-            pct = 0.0
-        rows.append((comp, int(row[category]), implemented, pct, row["group"]))
-
-    rows.sort(key=lambda x: x[3], reverse=True)
-
-    exceeded = 0
-    for comp, count, implemented, pct, group in rows:
-        if pct >= threshold * 100:
-            exceeded += 1
-        lines.append(
-            f"  {comp:45} {count:>6} / {int(implemented):<5}  {pct:5.1f}%"
-        )
-    lines.append("")
-    lines.append(f"  Components exceeding {int(threshold * 100)}%: {exceeded} / {n_total}")
-    lines.append(f"  Proportion: {exceeded}/{n_total} = {safe_pct(exceeded, n_total):.1f}%")
-
-    return lines
+# def stats_category_report(df, category, threshold=0.5):
+#     n_total = len(df)
+#     lines   = [
+#         "=" * 74,
+#         f"Category: {category}",
+#         "=" * 74,
+#         f"  {'Component':45} {'Count':>6} {'% of implemented':>18}",
+#         "  " + "-" * 72,
+#     ]
+#     rows = []
+#     for comp, row in df.iterrows():
+#         implemented = row["explicit"] + row["implicit"] + row["external"]
+#         if implemented > 0:
+#             pct = safe_pct(row[category], implemented)
+#         else:
+#             pct = 0.0
+#         rows.append((comp, int(row[category]), implemented, pct, row["group"]))
+#
+#     rows.sort(key=lambda x: x[3], reverse=True)
+#
+#     exceeded = 0
+#     for comp, count, implemented, pct, group in rows:
+#         if pct >= threshold * 100:
+#             exceeded += 1
+#         lines.append(
+#             f"  {comp:45} {count:>6} / {int(implemented):<5}  {pct:5.1f}%"
+#         )
+#     lines.append("")
+#     lines.append(f"  Components exceeding {int(threshold * 100)}%: {exceeded} / {n_total}")
+#     lines.append(f"  Proportion: {exceeded}/{n_total} = {safe_pct(exceeded, n_total):.1f}%")
+#
+#     return lines
 
 
 def main():
@@ -144,11 +144,11 @@ def main():
     df = load_data()
     calculate_stats()
     print(f"Saved basic statistics to {OUT_PATH}")
-    for cat in CATEGORIES:
-        cat_lines = stats_category_report(df, category=cat, threshold=0.5)
-        cat_path  = OUT_DIR / f"stats_{cat}.txt"
-        cat_path.write_text("\n".join(cat_lines) + "\n", encoding="utf-8")
-        print(f"Saved each status's statistics to {cat_path}")
+    # for cat in CATEGORIES:
+    #     cat_lines = stats_category_report(df, category=cat, threshold=0.5)
+    #     cat_path  = OUT_DIR / f"stats_{cat}.txt"
+    #     cat_path.write_text("\n".join(cat_lines) + "\n", encoding="utf-8")
+    #     print(f"Saved each status's statistics to {cat_path}")
 
 if __name__ == "__main__":
     main()
