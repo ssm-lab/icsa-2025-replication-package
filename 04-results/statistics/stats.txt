@@ -3,15 +3,15 @@ Statistics Summary
 ========================================
 Counts
 ----------------------------------------
-explicit                       | 97
-implicit                       | 53
-external                       | 43
-not implemented                | 221
-total                          | 414
+explicit                       | 120
+implicit                       | 58
+external                       | 47
+not implemented                | 225
+total                          | 450
 
 Percentages
 ----------------------------------------
-explicit vs total              | 23.43%
-explicit vs implemented        | 50.26%
-implicit vs implemented        | 27.46%
-external vs implemented        | 22.28%
+explicit vs total              | 26.67%
+explicit vs implemented        | 53.33%
+implicit vs implemented        | 25.78%
+external vs implemented        | 20.89%
