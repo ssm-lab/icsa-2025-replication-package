@@ -61,6 +61,9 @@ COMPONENT_RENAME = {
     "Learner":  "Learner",
     "Environment": "Environment",
     "Environment Core": "Environment\nCore",
+    "Action Manager": "Action Mgr.",
+    "Observation Manager": "Observation Mgr.",
+    "Reward Manager": "Reward Mgr.",
     "Simulator": "Simulator",
     "Simulator Adapter": "Simulator\nAdapter",
     "Data Persistence": "Data\nPersistence",
@@ -89,6 +92,9 @@ KEEP_COMPONENTS = {
     "Learner",
     "Environment",
     "Environment Core",
+    "Action Manager",
+    "Observation Manager",
+    "Reward Manager",
     "Simulator",
     "Simulator Adapter",
 }
@@ -118,6 +124,9 @@ MANUAL_ORDER = [
     "Hyperparameter Tuner",
     "Experiment Orchestrator",
     "Benchmark Manager",
+    "Action Manager",
+    "Observation Manager",
+    "Reward Manager",
     "Simulator Adapter",
     "Simulator",
     "Environment",
@@ -135,6 +144,21 @@ MANUAL_ORDER_UTILITIES = [
     "Reporter",
 ]
 
+EXPERIMENT_GROUP_COMPONENTS = [
+    "Experiment Orchestrator", "Experiment Manager","Hyperparameter Tuner", "Benchmark Manager",
+]
+
+FRAMEWORK_GROUP_COMPONENTS = [
+    "Framework Orchestrator", "Lifecycle Manager", "Configuration Manager",
+    "Multi-Agent Coordinator", "Distributed Execution Coordinator",
+    "Agent", "Function Approximator", "Buffer", "Learner",
+    # "Experiment Orchestrator", "Experiment Manager","Hyperparameter Tuner", "Benchmark Manager",
+]
+
+ENVIRONMENT_GROUP_COMPONENTS = [
+    "Environment", "Environment Core", "Simulator", "Simulator Adapter",
+    "Action Manager", "Observation Manager", "Reward Manager",
+]
 
 def clean(x) -> str:
     if pd.isna(x):
@@ -210,8 +234,7 @@ def plot_heatmap(df):
     ax.axvline(x=3, color="white", linewidth=2.5)
     ax.set_xticklabels(
         ["Implicit", "External", "Explicit", "Implicit", "External", "Explicit"],
-        rotation=0, fontsize=11
-    )
+        rotation=0, fontsize=11)
     ax.text(0.25, 1.01, "Labeled as Framework", ha="center", va="bottom",
             fontsize=11, fontweight="bold", transform=ax.transAxes)
     ax.text(0.75, 1.01, "Labeled as Environment", ha="center", va="bottom",
@@ -222,6 +245,17 @@ def plot_heatmap(df):
     plt.tight_layout()
     return fig
 
+def calculate_coverage(df, components, n_frameworks=10, n_environments=8):
+    filtered = df.loc[df.index.isin(components)]
+    y        = len(filtered)
+
+    x_framework  = int(filtered[["framework_explicit", "framework_implicit", "framework_external"]].sum().sum())
+    x_environment = int(filtered[["environment_explicit", "environment_implicit", "environment_external"]].sum().sum())
+
+    total_framework  = n_frameworks  * y
+    total_environment = n_environments * y
+    print(f" Framework: {x_framework} / {total_framework}")
+    print(f" Environment:{x_environment} / {total_environment}")
 
 def main():
     print("Building heatmap data…")
@@ -247,6 +281,13 @@ def main():
     fig.savefig(OUT_DIR / "plots" / "heatmap_util.pdf", bbox_inches="tight")
     plt.close(fig)
     print("Saved heatmap.")
+
+    print("Experiment Orchestrator group coverage:")
+    calculate_coverage(df_core, EXPERIMENT_GROUP_COMPONENTS)
+    print("Agent and Framework Orchestrator group coverage:")
+    calculate_coverage(df_core, FRAMEWORK_GROUP_COMPONENTS)
+    print("Environment group coverage:")
+    calculate_coverage(df_core, ENVIRONMENT_GROUP_COMPONENTS)
 
 
 if __name__ == "__main__":

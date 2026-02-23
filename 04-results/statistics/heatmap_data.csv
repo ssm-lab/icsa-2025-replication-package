@@ -12,6 +12,9 @@ Distributed Execution Coordinator,1,3,0,0,0,0
 Hyperparameter Tuner,0,3,0,0,0,0
 Experiment Orchestrator,1,0,0,0,0,0
 Benchmark Manager,0,0,1,0,0,0
+Action Manager,1,0,0,7,0,1
+Observation Manager,1,0,0,7,0,1
+Reward Manager,1,0,0,7,0,1
 Simulator Adapter,0,0,1,5,0,2
 Simulator,0,0,1,3,5,0
 Environment,0,0,1,0,0,8
