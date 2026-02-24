@@ -282,8 +282,8 @@ def main():
     plt.close(fig)
     print("Saved heatmap.")
 
-    print("Experiment Orchestrator group coverage:")
-    calculate_coverage(df_core, EXPERIMENT_GROUP_COMPONENTS)
+    # print("Experiment Orchestrator group coverage:")
+    # calculate_coverage(df_core, EXPERIMENT_GROUP_COMPONENTS)
     print("Agent and Framework Orchestrator group coverage:")
     calculate_coverage(df_core, FRAMEWORK_GROUP_COMPONENTS)
     print("Environment group coverage:")
