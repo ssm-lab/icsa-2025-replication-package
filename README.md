@@ -24,7 +24,8 @@ To address this gap, we propose an RA of RL frameworks. Through a grounded theor
   - `requirements.txt` -  Lists all required libraries and their versions.
   - `table_generator.py` - Generates tables I-VI in the publication.
   - `statistics_generator.py` - Generates statistical calculations.
-- `04-results` - Contains the plots and statistics that are used in the publication. For details, see [`04-results/tables/README.md`](04-results/tables/README.md) and [`04-results/statistics/README.md`](04-results/statistics/README.md).
+  - `heatmap_generator.py` - Generates heatmaps showing the implementations of RA components.
+- `04-results` - Contains the plots and statistics that are used in the publication. For details, see [`04-results/tables/README.md`](04-results/tables/README.md), [`04-results/statistics/README.md`](04-results/statistics/README.md), and .....
 
 ## Reproduction of analysis
 - Install the required Python packages by running `pip install -r ./03-analysis/requirements.txt` from the root folder.
@@ -32,6 +33,8 @@ To address this gap, we propose an RA of RL frameworks. Through a grounded theor
 Results will be generated into `04-results/tables` folders.
 - For statistics, run `python ./03-analysis/statistics_generator.py` from the root folder and follow the instructions. 
 Results  will be generated into `04-results/statistics` in a textual format.
+- For heatmaps, run `python ./03-analysis/heatmap_generator.py` from the root folder and follow the instructions. 
+Numerical results will be generated into `04-results/statistics` and corresponding visualizations into `04-results/plots`.
 
 ## Sampled frameworks
 | ID | Name | GitHub repository |
