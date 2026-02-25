@@ -20,6 +20,7 @@ To address this gap, we propose an RA of RL frameworks. Through a grounded theor
   - `03-final-RA.xlsx` - Includes finalized RA mapped to frameworks.
     - `final-RA-to-framework-summary` - Mapping frameworks with implementation status.
     - `final-RA-to-framework-detail` - Mapping frameworks with detailed information, e.g., link, code snippets, and explanation.
+  - `04-resonance-check.xlsx` - Responses from five experts in the resonance check phase. (Mind that this is not a full evaluation and it does not allow for generalization. However, it indicates interpretive plausibility and experiential alignment.)
 - `03-analysis` - Contains Python analysis scripts to obtain the results in the 04-results folder.
   - `requirements.txt` -  Lists all required libraries and their versions.
   - `table_generator.py` - Generates tables I-VI in the publication.
