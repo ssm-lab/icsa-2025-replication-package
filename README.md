@@ -1,6 +1,8 @@
 # Data package
 **For the article *A Reference Architecture of Reinforcement Learning Frameworks.***
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18637532.svg)](https://doi.org/10.5281/zenodo.18637532)
+
 ---
 ## About
 The surge in reinforcement learning (RL) applications gave rise to diverse supporting technology, such as RL frameworks. However, the architectural patterns of these frameworks are inconsistent across implementations and there exist no reference architecture (RA) to form a common basis of comparison, evaluation, and integration.
